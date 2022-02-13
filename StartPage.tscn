@@ -1,0 +1,135 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://StartPage.gd" type="Script" id=2]
+[ext_resource path="res://clips/StartGame.webm" type="VideoStream" id=3]
+[ext_resource path="res://fonts/white-rabbit/whitrabt.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 23
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+font_data = ExtResource( 4 )
+
+[node name="StartPage" type="ColorRect"]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartPanel" type="Panel" parent="."]
+margin_left = 112.0
+margin_top = 72.0
+margin_right = 912.0
+margin_bottom = 536.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="StartPanel"]
+margin_left = 32.0
+margin_top = 64.0
+margin_right = 772.0
+margin_bottom = 498.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="StartPanel"]
+wait_time = 0.7
+
+[node name="OpenButton" type="Button" parent="StartPanel"]
+margin_left = 296.0
+margin_top = 392.0
+margin_right = 596.0
+margin_bottom = 452.0
+rect_scale = Vector2( 0.702394, 0.670741 )
+mouse_filter = 2
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Open session"
+
+[node name="Title" type="Label" parent="StartPanel"]
+margin_left = 385.0
+margin_top = 4.0
+margin_right = 420.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Log"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 25.5795, 15.019 )
+mouse_filter = 2
+stream = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 336.0
+margin_top = 264.0
+margin_right = 686.0
+margin_bottom = 334.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Restart shell"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="StartPanel/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="StartPanel/OpenButton" to="." method="_on_OpenButton_pressed"]
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]

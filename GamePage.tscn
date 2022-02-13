@@ -1,0 +1,1416 @@
+[gd_scene load_steps=117 format=2]
+
+[ext_resource path="res://fonts/Sanitrixie.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Editing.gd" type="Script" id=2]
+[ext_resource path="res://GamePage.gd" type="Script" id=3]
+[ext_resource path="res://Log.gd" type="Script" id=4]
+[ext_resource path="res://WorkPage.gd" type="Script" id=5]
+[ext_resource path="res://Internal.gd" type="Script" id=6]
+[ext_resource path="res://External.gd" type="Script" id=7]
+[ext_resource path="res://Notification.gd" type="Script" id=8]
+[ext_resource path="res://Viewbook.gd" type="Script" id=9]
+[ext_resource path="res://Notebook.gd" type="Script" id=10]
+[ext_resource path="res://Daybook.gd" type="Script" id=11]
+[ext_resource path="res://Notif.gd" type="Script" id=12]
+[ext_resource path="res://SavePage.tscn" type="PackedScene" id=13]
+[ext_resource path="res://LoadPage.tscn" type="PackedScene" id=14]
+[ext_resource path="res://EndPage.tscn" type="PackedScene" id=15]
+[ext_resource path="res://clips/The_Line_Network_01.webm" type="VideoStream" id=16]
+[ext_resource path="res://StartPage.tscn" type="PackedScene" id=17]
+[ext_resource path="res://fonts/white-rabbit/whitrabt.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://WatchPage.gd" type="Script" id=19]
+[ext_resource path="res://arts/workloop/IMG_2245.PNG" type="Texture" id=20]
+[ext_resource path="res://arts/workloop/IMG_2249.PNG" type="Texture" id=21]
+[ext_resource path="res://arts/workloop/IMG_2241.PNG" type="Texture" id=22]
+[ext_resource path="res://arts/workloop/IMG_2242.PNG" type="Texture" id=23]
+[ext_resource path="res://arts/workloop/IMG_2243.PNG" type="Texture" id=24]
+[ext_resource path="res://arts/workloop/IMG_2244.PNG" type="Texture" id=25]
+[ext_resource path="res://arts/workloop/IMG_2247.PNG" type="Texture" id=26]
+[ext_resource path="res://arts/workloop/IMG_2251.PNG" type="Texture" id=27]
+[ext_resource path="res://arts/workloop/IMG_2248.PNG" type="Texture" id=28]
+[ext_resource path="res://arts/workloop/IMG_2250.PNG" type="Texture" id=29]
+[ext_resource path="res://arts/workloop/IMG_2246.PNG" type="Texture" id=30]
+[ext_resource path="res://arts/workloop/IMG_2231.PNG" type="Texture" id=31]
+[ext_resource path="res://arts/workloop/IMG_2232.PNG" type="Texture" id=32]
+[ext_resource path="res://arts/workloop/IMG_2233.PNG" type="Texture" id=33]
+[ext_resource path="res://arts/workloop/IMG_2234.PNG" type="Texture" id=34]
+[ext_resource path="res://arts/workloop/IMG_2235.PNG" type="Texture" id=35]
+[ext_resource path="res://arts/workloop/IMG_2230.PNG" type="Texture" id=36]
+[ext_resource path="res://arts/workloop/IMG_2226.PNG" type="Texture" id=37]
+[ext_resource path="res://arts/workloop/IMG_2227.PNG" type="Texture" id=38]
+[ext_resource path="res://arts/workloop/IMG_2228.PNG" type="Texture" id=39]
+[ext_resource path="res://arts/workloop/IMG_2229.PNG" type="Texture" id=40]
+[ext_resource path="res://arts/workloop/IMG_2236.PNG" type="Texture" id=41]
+[ext_resource path="res://arts/workloop/IMG_2240.PNG" type="Texture" id=42]
+[ext_resource path="res://arts/workloop/IMG_2237.PNG" type="Texture" id=43]
+[ext_resource path="res://arts/workloop/IMG_2238.PNG" type="Texture" id=44]
+[ext_resource path="res://arts/workloop/IMG_2239.PNG" type="Texture" id=45]
+[ext_resource path="res://arts/workloop/IMG_2258.PNG" type="Texture" id=46]
+[ext_resource path="res://arts/workloop/IMG_2255.PNG" type="Texture" id=47]
+[ext_resource path="res://arts/workloop/IMG_2257.PNG" type="Texture" id=48]
+[ext_resource path="res://arts/workloop/IMG_2256.PNG" type="Texture" id=49]
+[ext_resource path="res://arts/workloop/IMG_2252.PNG" type="Texture" id=50]
+[ext_resource path="res://arts/workloop/IMG_2253.PNG" type="Texture" id=51]
+[ext_resource path="res://arts/workloop/IMG_2254.PNG" type="Texture" id=52]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 20
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="DynamicFont" id=13]
+size = 20
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="DynamicFont" id=17]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="Animation" id=19]
+resource_name = "Pop"
+length = 0.03
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.03 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 400, 1 ), Vector2( 400, 40 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=20]
+font_path = "res://fonts/white-rabbit/whitrabt.ttf"
+
+[sub_resource type="DynamicFont" id=21]
+font_data = SubResource( 20 )
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="DynamicFont" id=24]
+size = 20
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="StyleBoxEmpty" id=26]
+
+[sub_resource type="Animation" id=27]
+resource_name = "Pop"
+length = 0.03
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.03 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 400, 1 ), Vector2( 400, 40 ) ]
+}
+
+[sub_resource type="DynamicFont" id=28]
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 30
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0.756863, 1, 0.65098, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 1, 0.156863, 1 )
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=37]
+size = 22
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 3
+border_width_top = 26
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=39]
+size = 22
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxEmpty" id=40]
+
+[sub_resource type="StyleBoxEmpty" id=41]
+
+[sub_resource type="DynamicFont" id=42]
+size = 20
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=43]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=44]
+size = 20
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=45]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=46]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=47]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=48]
+bg_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=49]
+bg_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=50]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=51]
+size = 25
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxFlat" id=52]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 26
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=53]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 26
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=54]
+
+[sub_resource type="StyleBoxEmpty" id=55]
+
+[sub_resource type="DynamicFont" id=56]
+size = 24
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=57]
+size = 25
+font_data = ExtResource( 18 )
+
+[sub_resource type="StyleBoxEmpty" id=58]
+
+[sub_resource type="DynamicFont" id=59]
+size = 25
+font_data = ExtResource( 18 )
+
+[sub_resource type="SpriteFrames" id=60]
+animations = [ {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 41 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 42 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 21 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 47 ), ExtResource( 49 ), ExtResource( 48 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=61]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 26
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=62]
+size = 24
+font_data = ExtResource( 18 )
+
+[sub_resource type="DynamicFont" id=63]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=64]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -80.0, 0.0 ]
+}
+
+[node name="GamePage" type="Node"]
+script = ExtResource( 3 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 25.6563, 15.0909 )
+color = Color( 0.152941, 0.156863, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGEffect" type="VideoPlayer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 25.6265, 15.0185 )
+stream = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Log" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Panel" type="Panel" parent="Log"]
+margin_left = 56.0
+margin_top = 368.0
+margin_right = 966.0
+margin_bottom = 518.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="TextEdit" parent="Log"]
+margin_left = 72.0
+margin_top = 384.0
+margin_right = 952.0
+margin_bottom = 504.0
+custom_styles/read_only = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/caret_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_readonly = Color( 0.756863, 1, 0.65098, 1 )
+readonly = true
+override_selected_font_color = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Editing" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="Editing"]
+margin_left = 56.0
+margin_top = 520.0
+margin_right = 966.0
+margin_bottom = 564.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Editing"]
+margin_left = 72.0
+margin_top = 531.0
+margin_right = 146.0
+margin_bottom = 554.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+text = "Nekoi>"
+max_lines_visible = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="Editing"]
+margin_left = 168.0
+margin_top = 529.0
+margin_right = 953.0
+margin_bottom = 553.0
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/cursor_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+placeholder_text = "Enter command here..."
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Internal" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="Panel" type="Panel" parent="Internal"]
+margin_left = 128.0
+margin_top = 48.0
+margin_right = 528.0
+margin_bottom = 348.0
+custom_styles/panel = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="TextEdit" parent="Internal"]
+margin_left = 152.0
+margin_top = 82.0
+margin_right = 502.0
+margin_bottom = 332.0
+custom_styles/read_only = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/caret_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_readonly = Color( 0.756863, 1, 0.65098, 1 )
+readonly = true
+override_selected_font_color = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewButton1" type="Button" parent="Internal"]
+margin_left = 512.0
+margin_top = 48.0
+margin_right = 524.0
+margin_bottom = 71.0
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notif" type="Node" parent="Internal"]
+script = ExtResource( 12 )
+
+[node name="Panel" type="Panel" parent="Internal/Notif"]
+margin_left = 128.0
+margin_top = 347.0
+margin_right = 528.0
+margin_bottom = 348.0
+rect_scale = Vector2( 1, -1 )
+custom_styles/panel = SubResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Internal/Notif/Panel"]
+anims/Pop = SubResource( 19 )
+
+[node name="Label" type="Label" parent="Internal/Notif"]
+visible = false
+margin_left = 144.0
+margin_top = 321.0
+margin_right = 480.0
+margin_bottom = 336.0
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "NA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="External" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="Panel" type="Panel" parent="External"]
+margin_left = 560.0
+margin_top = 48.0
+margin_right = 960.0
+margin_bottom = 348.0
+custom_styles/panel = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="TextEdit" parent="External"]
+margin_left = 584.0
+margin_top = 82.0
+margin_right = 934.0
+margin_bottom = 332.0
+custom_styles/read_only = SubResource( 22 )
+custom_styles/normal = SubResource( 23 )
+custom_fonts/font = SubResource( 24 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/caret_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_readonly = Color( 0.756863, 1, 0.65098, 1 )
+readonly = true
+override_selected_font_color = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewButton2" type="Button" parent="External"]
+margin_left = 944.0
+margin_top = 48.0
+margin_right = 956.0
+margin_bottom = 71.0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 26 )
+custom_styles/normal = SubResource( 16 )
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notif" type="Node" parent="External"]
+script = ExtResource( 12 )
+
+[node name="Panel" type="Panel" parent="External/Notif"]
+margin_left = 560.0
+margin_top = 347.0
+margin_right = 960.0
+margin_bottom = 348.0
+rect_scale = Vector2( 1, -1 )
+custom_styles/panel = SubResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="External/Notif/Panel"]
+anims/Pop = SubResource( 27 )
+
+[node name="Label" type="Label" parent="External/Notif"]
+visible = false
+margin_left = 576.0
+margin_top = 320.0
+margin_right = 912.0
+margin_bottom = 335.0
+custom_fonts/font = SubResource( 28 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "NA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Side" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="Side"]
+margin_left = 16.0
+margin_top = 48.0
+margin_right = 96.0
+margin_bottom = 348.0
+custom_styles/panel = SubResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotificationButton" type="Button" parent="Side"]
+margin_left = 32.0
+margin_top = 64.0
+margin_right = 82.0
+margin_bottom = 114.0
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NotificationButtonHover" type="Label" parent="Side"]
+visible = false
+anchor_left = 0.116
+anchor_right = 0.116
+margin_left = -86.784
+margin_top = 64.0
+margin_right = -36.784
+margin_bottom = 114.0
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SystemButton" type="Button" parent="Side"]
+margin_left = 32.0
+margin_top = 136.0
+margin_right = 82.0
+margin_bottom = 186.0
+custom_styles/hover = SubResource( 35 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "||"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SystemButtonHover" type="Label" parent="Side"]
+visible = false
+anchor_left = 0.116
+anchor_right = 0.116
+margin_left = -86.784
+margin_top = 136.0
+margin_right = -36.784
+margin_bottom = 186.0
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "||"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoteButton" type="Button" parent="Side"]
+margin_left = 32.0
+margin_top = 208.0
+margin_right = 82.0
+margin_bottom = 258.0
+custom_styles/hover = SubResource( 36 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "[]"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoteButtonHover" type="Label" parent="Side"]
+visible = false
+anchor_left = 0.116
+anchor_right = 0.116
+margin_left = -86.784
+margin_top = 208.0
+margin_right = -36.784
+margin_bottom = 258.0
+custom_styles/normal = SubResource( 34 )
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "[]"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Side"]
+margin_left = 28.1137
+margin_top = 281.0
+margin_right = 85.1137
+margin_bottom = 338.0
+custom_fonts/font = SubResource( 37 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartPage" parent="." instance=ExtResource( 17 )]
+visible = false
+
+[node name="Notification" type="WindowDialog" parent="."]
+margin_left = 344.0
+margin_top = 80.0
+margin_right = 674.0
+margin_bottom = 450.0
+custom_styles/panel = SubResource( 38 )
+custom_fonts/title_font = SubResource( 39 )
+custom_constants/close_h_ofs = 22
+custom_constants/close_v_ofs = -5
+custom_constants/title_height = -29
+window_title = "Reminders"
+script = ExtResource( 8 )
+
+[node name="Label2" type="TextEdit" parent="Notification"]
+margin_left = 16.0
+margin_top = 32.0
+margin_right = 316.0
+margin_bottom = 352.0
+custom_styles/read_only = SubResource( 40 )
+custom_styles/normal = SubResource( 41 )
+custom_fonts/font = SubResource( 42 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/caret_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_readonly = Color( 0.756863, 1, 0.65098, 1 )
+readonly = true
+override_selected_font_color = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Daybook" type="WindowDialog" parent="."]
+margin_left = 344.0
+margin_top = 176.0
+margin_right = 674.0
+margin_bottom = 376.0
+custom_styles/panel = SubResource( 43 )
+custom_fonts/title_font = SubResource( 44 )
+custom_colors/title_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_constants/close_h_ofs = 22
+custom_constants/close_v_ofs = -5
+custom_constants/title_height = -35
+window_title = "Notice"
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Daybook"]
+margin_left = 16.0
+margin_top = 64.0
+margin_right = 316.0
+margin_bottom = 144.0
+custom_styles/normal = SubResource( 41 )
+custom_fonts/font = SubResource( 42 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Close" type="Label" parent="Daybook"]
+margin_left = 310.0
+margin_top = 1.0
+margin_right = 350.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 45 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+text = "x"
+
+[node name="Loaded" type="WindowDialog" parent="."]
+margin_left = 344.0
+margin_top = 176.0
+margin_right = 674.0
+margin_bottom = 376.0
+custom_styles/panel = SubResource( 43 )
+custom_fonts/title_font = SubResource( 44 )
+custom_colors/title_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_constants/close_h_ofs = 22
+custom_constants/close_v_ofs = -5
+custom_constants/title_height = -35
+window_title = "Notice"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Loaded"]
+margin_left = 16.0
+margin_top = 64.0
+margin_right = 316.0
+margin_bottom = 144.0
+custom_styles/normal = SubResource( 41 )
+custom_fonts/font = SubResource( 42 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+text = "Game loaded"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Close" type="Label" parent="Loaded"]
+margin_left = 310.0
+margin_top = 1.0
+margin_right = 350.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 45 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+text = "x"
+
+[node name="Settings" type="WindowDialog" parent="."]
+margin_left = 296.0
+margin_top = 224.0
+margin_right = 696.0
+margin_bottom = 374.0
+custom_styles/panel = SubResource( 46 )
+custom_fonts/title_font = SubResource( 44 )
+custom_colors/title_color = Color( 0, 1, 0.156863, 1 )
+custom_constants/close_h_ofs = 22
+custom_constants/close_v_ofs = -5
+custom_constants/title_height = -35
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Settings"]
+margin_left = 24.0
+margin_top = 32.0
+margin_right = 374.0
+margin_bottom = 132.0
+custom_styles/normal = SubResource( 41 )
+custom_fonts/font = SubResource( 42 )
+custom_colors/font_color = Color( 0, 1, 0.156863, 1 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Close" type="Label" parent="Settings"]
+margin_left = 380.0
+margin_top = 1.0
+margin_right = 420.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 47 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+text = "x"
+
+[node name="SaveButton" type="Button" parent="Settings"]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 182.0
+margin_bottom = 72.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadButton" type="Button" parent="Settings"]
+margin_left = 32.0
+margin_top = 88.0
+margin_right = 182.0
+margin_bottom = 128.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Load"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartButton" type="Button" parent="Settings"]
+margin_left = 216.0
+margin_top = 32.0
+margin_right = 366.0
+margin_bottom = 72.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="Settings"]
+margin_left = 216.0
+margin_top = 88.0
+margin_right = 366.0
+margin_bottom = 128.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="WindowDialog" parent="."]
+margin_left = 296.0
+margin_top = 224.0
+margin_right = 696.0
+margin_bottom = 374.0
+custom_styles/panel = SubResource( 52 )
+custom_fonts/title_font = SubResource( 44 )
+custom_colors/title_color = Color( 0, 0, 0, 1 )
+custom_constants/close_h_ofs = 22
+custom_constants/close_v_ofs = -5
+custom_constants/title_height = -31
+window_title = "Confirm"
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Restart"]
+margin_left = 16.0
+margin_top = 32.0
+margin_right = 386.0
+margin_bottom = 92.0
+custom_styles/normal = SubResource( 41 )
+custom_fonts/font = SubResource( 42 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+text = "Unsaved progress will be lost.
+Restart?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="YesButton" type="Button" parent="Restart"]
+margin_left = 32.0
+margin_top = 96.0
+margin_right = 182.0
+margin_bottom = 136.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Yes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoButton" type="Button" parent="Restart"]
+margin_left = 216.0
+margin_top = 96.0
+margin_right = 366.0
+margin_bottom = 136.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "No"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewbook" type="WindowDialog" parent="."]
+margin_top = 48.0
+margin_right = 1024.0
+margin_bottom = 568.0
+custom_styles/panel = SubResource( 53 )
+custom_fonts/title_font = SubResource( 39 )
+custom_constants/close_h_ofs = 22
+custom_constants/close_v_ofs = -5
+custom_constants/title_height = -29
+window_title = "Viewing"
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Viewbook"]
+margin_left = 56.0
+margin_top = 80.0
+margin_right = 974.0
+margin_bottom = 380.0
+custom_styles/panel = SubResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="TextEdit" parent="Viewbook"]
+margin_left = 88.0
+margin_top = 112.0
+margin_right = 938.0
+margin_bottom = 352.0
+custom_styles/read_only = SubResource( 54 )
+custom_styles/normal = SubResource( 55 )
+custom_fonts/font = SubResource( 56 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_readonly = Color( 0.756863, 1, 0.65098, 1 )
+readonly = true
+override_selected_font_color = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="Viewbook"]
+margin_left = 56.0
+margin_top = 408.0
+margin_right = 206.0
+margin_bottom = 448.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Previous"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="Viewbook"]
+margin_left = 824.0
+margin_top = 408.0
+margin_right = 974.0
+margin_bottom = 448.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 57 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PageLabel" type="Label" parent="Viewbook"]
+margin_left = 456.0
+margin_top = 408.0
+margin_right = 606.0
+margin_bottom = 448.0
+custom_styles/normal = SubResource( 58 )
+custom_fonts/font = SubResource( 59 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WatchPage" type="WindowDialog" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 53 )
+custom_fonts/title_font = SubResource( 39 )
+custom_constants/close_h_ofs = 22
+custom_constants/close_v_ofs = -5
+custom_constants/title_height = -29
+window_title = "DemTube"
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="TextureRect" parent="WatchPage"]
+margin_left = 3.0
+margin_top = 26.0
+margin_right = 1027.0
+margin_bottom = 626.0
+rect_scale = Vector2( 0.995493, 0.953333 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="TextEdit" parent="WatchPage"]
+margin_left = 64.0
+margin_top = 264.0
+margin_right = 964.0
+margin_bottom = 564.0
+custom_styles/read_only = SubResource( 54 )
+custom_styles/normal = SubResource( 55 )
+custom_fonts/font = SubResource( 56 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_readonly = Color( 0.756863, 1, 0.65098, 1 )
+readonly = true
+override_selected_font_color = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WorkPage" type="WindowDialog" parent="."]
+margin_left = 112.0
+margin_top = 32.0
+margin_right = 912.0
+margin_bottom = 572.0
+custom_styles/panel = SubResource( 53 )
+custom_fonts/title_font = SubResource( 39 )
+custom_constants/close_h_ofs = 22
+custom_constants/close_v_ofs = -5
+custom_constants/title_height = -29
+window_title = "Work"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="AnimatedSprite" parent="WorkPage"]
+position = Vector2( 400, 280 )
+scale = Vector2( 0.984892, 0.971296 )
+frames = SubResource( 60 )
+
+[node name="Label2" type="TextEdit" parent="WorkPage"]
+margin_left = 40.0
+margin_top = 184.0
+margin_right = 760.0
+margin_bottom = 384.0
+custom_styles/read_only = SubResource( 54 )
+custom_styles/normal = SubResource( 55 )
+custom_fonts/font = SubResource( 56 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_readonly = Color( 0.756863, 1, 0.65098, 1 )
+readonly = true
+override_selected_font_color = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notebook" type="WindowDialog" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 61 )
+custom_fonts/title_font = SubResource( 39 )
+custom_constants/close_h_ofs = 22
+custom_constants/close_v_ofs = -5
+custom_constants/title_height = -29
+window_title = "Notebook"
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Notebook"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 484.0
+margin_bottom = 514.0
+custom_styles/panel = SubResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="TextEdit" parent="Notebook"]
+margin_left = 88.0
+margin_top = 88.0
+margin_right = 458.0
+margin_bottom = 488.0
+custom_styles/read_only = SubResource( 54 )
+custom_styles/normal = SubResource( 55 )
+custom_fonts/font = SubResource( 62 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/caret_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_readonly = Color( 0.756863, 1, 0.65098, 1 )
+override_selected_font_color = true
+wrap_enabled = true
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="Notebook"]
+margin_left = 542.0
+margin_top = 64.0
+margin_right = 962.0
+margin_bottom = 514.0
+custom_styles/panel = SubResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label22" type="TextEdit" parent="Notebook"]
+margin_left = 568.0
+margin_top = 88.0
+margin_right = 938.0
+margin_bottom = 488.0
+custom_styles/read_only = SubResource( 54 )
+custom_styles/normal = SubResource( 55 )
+custom_fonts/font = SubResource( 62 )
+custom_colors/selection_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/caret_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_readonly = Color( 0.756863, 1, 0.65098, 1 )
+override_selected_font_color = true
+wrap_enabled = true
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="Notebook"]
+margin_left = 139.0
+margin_top = 520.0
+margin_right = 289.0
+margin_bottom = 560.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Previous"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveButton" type="Button" parent="Notebook"]
+margin_left = 64.0
+margin_top = 520.0
+margin_right = 134.0
+margin_bottom = 560.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextButton" type="Button" parent="Notebook"]
+margin_left = 736.0
+margin_top = 520.0
+margin_right = 886.0
+margin_bottom = 560.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 57 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AddButton" type="Button" parent="Notebook"]
+margin_left = 892.0
+margin_top = 520.0
+margin_right = 962.0
+margin_bottom = 560.0
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+custom_fonts/font = SubResource( 63 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PageLabel" type="Label" parent="Notebook"]
+margin_left = 440.0
+margin_top = 520.0
+margin_right = 590.0
+margin_bottom = 560.0
+custom_styles/normal = SubResource( 58 )
+custom_fonts/font = SubResource( 59 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SavePage" parent="." instance=ExtResource( 13 )]
+margin_left = 192.0
+margin_top = 96.0
+margin_right = 792.0
+margin_bottom = 496.0
+
+[node name="LoadPage" parent="." instance=ExtResource( 14 )]
+margin_left = 192.0
+margin_top = 96.0
+margin_right = 792.0
+margin_bottom = 496.0
+
+[node name="EndPage" parent="." instance=ExtResource( 15 )]
+visible = false
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Music"]
+anims/FadeIn = SubResource( 64 )
+[connection signal="finished" from="BGEffect" to="." method="_on_BGEffect_finished"]
+[connection signal="command_entered" from="Log" to="." method="_on_Log_command_entered"]
+[connection signal="focus_entered" from="Editing/LineEdit" to="Editing" method="_on_LineEdit_focus_entered"]
+[connection signal="focus_exited" from="Editing/LineEdit" to="Editing" method="_on_LineEdit_focus_exited"]
+[connection signal="text_entered" from="Editing/LineEdit" to="Log" method="_on_LineEdit_text_entered"]
+[connection signal="pressed" from="Internal/ViewButton1" to="." method="_on_ViewButton1_pressed"]
+[connection signal="gui_input" from="Internal/Notif/Panel" to="." method="_on_Panel1_gui_input"]
+[connection signal="pressed" from="External/ViewButton2" to="." method="_on_ViewButton2_pressed"]
+[connection signal="gui_input" from="External/Notif/Panel" to="." method="_on_Panel2_gui_input"]
+[connection signal="pressed" from="Side/NotificationButton" to="." method="_on_NotificationButton_pressed"]
+[connection signal="pressed" from="Side/SystemButton" to="." method="_on_SystemButton_pressed"]
+[connection signal="pressed" from="Side/NoteButton" to="." method="_on_NoteButton_pressed"]
+[connection signal="done" from="StartPage" to="." method="from_start_done"]
+[connection signal="pressed" from="Settings/SaveButton" to="." method="_on_SaveButton_pressed"]
+[connection signal="pressed" from="Settings/LoadButton" to="." method="_on_LoadButton_pressed"]
+[connection signal="pressed" from="Settings/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="Settings/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Restart/YesButton" to="." method="_on_YesButton_pressed"]
+[connection signal="pressed" from="Restart/NoButton" to="." method="_on_NoButton_pressed"]
+[connection signal="pressed" from="Viewbook/BackButton" to="Viewbook" method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Viewbook/NextButton" to="Viewbook" method="_on_NextButton_pressed"]
+[connection signal="popup_hide" from="WorkPage" to="WorkPage" method="_on_WorkPage_popup_hide"]
+[connection signal="text_changed" from="Notebook/Label2" to="Notebook" method="_on_Label2_text_changed"]
+[connection signal="text_changed" from="Notebook/Label22" to="Notebook" method="_on_Label22_text_changed"]
+[connection signal="pressed" from="Notebook/BackButton" to="Notebook" method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Notebook/SaveButton" to="Notebook" method="_on_SaveButton_pressed"]
+[connection signal="pressed" from="Notebook/NextButton" to="Notebook" method="_on_NextButton_pressed"]
+[connection signal="pressed" from="Notebook/AddButton" to="Notebook" method="_on_AddButton_pressed"]

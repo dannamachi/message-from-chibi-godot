@@ -1,0 +1,196 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://fonts/Sanitrixie.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://EndPage.gd" type="Script" id=2]
+[ext_resource path="res://masks/mask_green.png" type="Texture" id=3]
+[ext_resource path="res://masks/weird_shader.shader" type="Shader" id=4]
+[ext_resource path="res://clips/GameOver.webm" type="VideoStream" id=5]
+[ext_resource path="res://clips/GameOver2.webm" type="VideoStream" id=6]
+[ext_resource path="res://sounds/static.wav" type="AudioStream" id=7]
+[ext_resource path="res://fonts/white-rabbit/whitrabt.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+border_color = Color( 0, 1, 0.156863, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.756863, 1, 0.65098, 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 4 )
+shader_param/cutoff = 0.0
+shader_param/smooth_size = 1.0
+shader_param/mask = ExtResource( 3 )
+
+[sub_resource type="Animation" id=10]
+resource_name = "FadeIn"
+length = 2.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -80.0, 0.0 ]
+}
+
+[node name="EndPage" type="Panel"]
+margin_right = 1024.0
+margin_bottom = 600.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 960.0
+margin_bottom = 536.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 152.0
+margin_top = 208.0
+margin_right = 872.0
+margin_bottom = 480.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 96.0
+margin_top = 80.0
+margin_right = 928.0
+margin_bottom = 208.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+text = "GAME OVER"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 480.0
+margin_top = 552.0
+margin_right = 544.0
+margin_bottom = 584.0
+mouse_filter = 2
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.756863, 1, 0.65098, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+text = "v"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fade" type="ColorRect" parent="."]
+material = SubResource( 9 )
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 25.6095, 15.0098 )
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animation" type="AnimationPlayer" parent="Fade"]
+anims/FadeIn = SubResource( 10 )
+
+[node name="Clip_bad" type="VideoPlayer" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 25.6487, 14.9609 )
+mouse_filter = 2
+stream = ExtResource( 6 )
+
+[node name="Clip_base_good" type="VideoPlayer" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 25.6487, 14.9609 )
+mouse_filter = 2
+stream = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Music"]
+anims/FadeIn = SubResource( 11 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
